@@ -1,6 +1,8 @@
 package com.wirebarley.apply.config;
 
+import com.ulisesbocchio.jasyptspringboot.annotation.EncryptablePropertySource;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.web.servlet.config.annotation.*;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
