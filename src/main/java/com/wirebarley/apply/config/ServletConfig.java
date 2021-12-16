@@ -1,4 +1,4 @@
-package config;
+package com.wirebarley.apply.config;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.web.servlet.config.annotation.*;
@@ -6,7 +6,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
 
 @EnableWebMvc
-@ComponentScan(basePackages = {"controller"})
+@ComponentScan(basePackages = {"com.wirebarley.apply"})
 public class ServletConfig implements WebMvcConfigurer {
 
     @Override

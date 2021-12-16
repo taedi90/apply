@@ -1,4 +1,4 @@
-package config;
+package com.wirebarley.apply.config;
 
 import org.springframework.web.filter.CharacterEncodingFilter;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
