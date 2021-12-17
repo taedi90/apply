@@ -71,14 +71,14 @@
 
     function cbkupdateExrate(result){
         result = JSON.parse(result);
-        console.log(result);
+        //console.log(result);
 
         if(result.success === true) {
             for (const [key, value] of Object.entries(result.quotes)) {
-                console.log(`${key}: ${value}`);
+                //console.log(`${key}: ${value}`);
 
                 const currency = key.substring(3,6);
-                console.log(currency);
+                //console.log(currency);
                 const exrate = value.toFixed(2);
 
                 elReceive.querySelector(`[data-currency="${currency}"]`).value = exrate;
