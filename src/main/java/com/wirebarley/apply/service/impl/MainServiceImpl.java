@@ -1,7 +1,7 @@
 package com.wirebarley.apply.service.impl;
 
 import com.ulisesbocchio.jasyptspringboot.annotation.EncryptablePropertySource;
-import com.wirebarley.apply.dto.ApiResponse;
+import com.wirebarley.apply.dto.ApiResult;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
@@ -20,18 +20,21 @@ public class MainServiceImpl implements MainService {
     @Value("${currencylayer.key}")
     String encKey; //API key
 
-    public ApiResponse getExchangeRate() {
+
+    //환율 정보 가져오기
+    public ApiResult getExchangeRate() {
 
         //URL 설정
         URI targetUrl = UriComponentsBuilder.fromUriString(baseUrl)
                 .queryParam("access_key", encKey)
+                .queryParam("source", "USD")
                 .build()
                 .encode()
                 .toUri();
 
         RestTemplate restTemplate = new RestTemplate();
 
-        ApiResponse response = restTemplate.getForObject(targetUrl, ApiResponse.class);
+        ApiResult response = restTemplate.getForObject(targetUrl, ApiResult.class);
 
         return response;
     }

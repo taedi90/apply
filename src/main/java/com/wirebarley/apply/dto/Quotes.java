@@ -3,7 +3,6 @@ package com.wirebarley.apply.dto;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
-import lombok.ToString;
 
 import java.io.Serializable;
 
@@ -12,15 +11,14 @@ import java.io.Serializable;
  */
 
 @Data
-@ToString
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Quotes implements Serializable {
     @JsonProperty("USDKRW")
-    private Double usdkrw;
+    private Double krw;
 
     @JsonProperty("USDJPY")
-    private Double usdjpy;
+    private Double jpy;
 
     @JsonProperty("USDPHP")
-    private Double usdphp;
+    private Double php;
 }

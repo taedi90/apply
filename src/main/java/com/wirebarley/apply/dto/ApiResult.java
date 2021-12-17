@@ -7,7 +7,7 @@ import lombok.Data;
  */
 
 @Data
-public class ApiResponse {
+public class ApiResult {
     private boolean success; //성공 여부
     private Error error; //에러 정보
     private Quotes quotes; //시세 정보
