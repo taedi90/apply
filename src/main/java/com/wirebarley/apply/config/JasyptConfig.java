@@ -9,9 +9,6 @@ import org.springframework.core.env.Environment;
 
 /**
  * properties 암호화 모듈
- *
- * - 환경변수에 TAEDI_ENC_KEY 값 등록해야 사용 가능
- * @author taedi
  */
 @Configuration
 public class JasyptConfig {
@@ -21,7 +18,8 @@ public class JasyptConfig {
         PooledPBEStringEncryptor encryptor = new PooledPBEStringEncryptor();
         SimpleStringPBEConfig config = new SimpleStringPBEConfig();
 
-        config.setPassword(System.getenv("TAEDI_ENC_KEY"));
+        //config.setPassword(System.getenv("TAEDI_ENC_KEY"));
+        config.setPassword("pass");
         config.setAlgorithm("PBEWITHHMACSHA512ANDAES_256");
         config.setKeyObtentionIterations("10");
         config.setPoolSize("1");

@@ -5,6 +5,4 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 @ComponentScan(basePackages = {"com.wirebarley.apply"})
-public class RootConfig {
-
-}
+public class RootConfig {}

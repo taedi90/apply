@@ -1,10 +1,14 @@
 package com.wirebarley.apply.config;
 
+import org.springframework.context.annotation.Configuration;
 import org.springframework.web.filter.CharacterEncodingFilter;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 import javax.servlet.Filter;
 
+@Configuration
+@EnableWebMvc
 public class WebConfig extends AbstractAnnotationConfigDispatcherServletInitializer {
     @Override
     protected  Class<?>[] getRootConfigClasses() {
